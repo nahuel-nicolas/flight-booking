@@ -4,7 +4,7 @@ from django.conf import settings
 class City(models.Model):
     name=models.CharField(max_length=100, unique=True)
 
-class Flight(models.Model):
+class FlightBooking(models.Model):
     departure_city = models.ForeignKey(
         City, 
         on_delete=models.CASCADE, 
@@ -17,6 +17,7 @@ class Flight(models.Model):
     )
     departure_datetime = models.DateTimeField()
     arriving_datetime = models.DateTimeField()
+    is_first_class = models.BooleanField()
     round_flight = models.ForeignKey('self', null=True, on_delete=models.CASCADE)
     passengers = models.ManyToManyField(settings.AUTH_USER_MODEL)
 

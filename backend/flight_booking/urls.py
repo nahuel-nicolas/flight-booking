@@ -4,7 +4,7 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register('city', views.CityViewSet)
-router.register('flight', views.FlightViewSet)
+router.register('bookings', views.FlightBookingViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

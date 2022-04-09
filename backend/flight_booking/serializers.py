@@ -1,4 +1,4 @@
-from .models import Flight, City
+from .models import FlightBooking, City
 from rest_framework import serializers
 
 class CitySerializer(serializers.ModelSerializer):
@@ -6,7 +6,7 @@ class CitySerializer(serializers.ModelSerializer):
         model = City
         fields = '__all__'
 
-class FlightSerializer(serializers.ModelSerializer):
+class FlightBookingSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Flight
+        model = FlightBooking
         fields = '__all__'
