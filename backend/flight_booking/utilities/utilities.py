@@ -9,4 +9,3 @@ def build_cities_table():
     """
     for currentCityName in cities:
         City.objects.get_or_create(name=currentCityName)
-
