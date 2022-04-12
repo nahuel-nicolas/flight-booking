@@ -1,6 +1,7 @@
-const CustomInputRadio = ({ name, id, setStateFunction }) => (
+const CustomInputRadio = ({ name, id, setStateFunction, selected }) => (
     <>
         <input 
+            selected={selected}
             type="radio" 
             name={name} 
             id={id} 

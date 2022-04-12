@@ -1,3 +1,9 @@
+export async function getCitiesDataOptions(url, authTokens) {
+    const citiesData = await customFetch(url, 'GET', authTokens)
+    const citiesDataOptions = getOptionsFromObjectsList(citiesData, 'id', 'name')
+    return citiesDataOptions
+}
+
 export async function fetch_and_set_cities_data(url, authTokens, ...setFunctionList) {
     const citiesData = await customFetch(url, 'GET', authTokens)
     const citiesDataOptions = getOptionsFromObjectsList(citiesData, 'id', 'name')
@@ -31,7 +37,7 @@ export async function fetch_and_set(url, authTokens, ...setFunctionList) {
     }
 }
 
-export async function makePostRequest(url, data, authTokens) {
+export async function makePostRequest(url, authTokens, data) {
   const response = await fetch(
     url, 
     {
