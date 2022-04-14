@@ -16,8 +16,8 @@ class Flight(models.Model):
         on_delete=models.CASCADE, 
         related_name="arriving_city"
     )
-    departure_date = models.DateTimeField()
-    arriving_date = models.DateTimeField()
+    departure_datetime = models.DateTimeField()
+    arriving_datetime = models.DateTimeField()
 
 class FlightBooking(models.Model):
     go_flight = models.ForeignKey(
@@ -26,8 +26,10 @@ class FlightBooking(models.Model):
     round_flight = models.ForeignKey(
         Flight, related_name='round_flight', on_delete=models.CASCADE, null=True
     )
+    passengers = models.IntegerField()
     is_first_class = models.BooleanField()
 
 class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bookings = models.ManyToManyField(FlightBooking)
+    
