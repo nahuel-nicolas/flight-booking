@@ -31,5 +31,5 @@ class FlightBooking(models.Model):
 
 class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    bookings = models.ManyToManyField(FlightBooking)
+    bookings = models.ManyToManyField(FlightBooking, blank=True)
     
