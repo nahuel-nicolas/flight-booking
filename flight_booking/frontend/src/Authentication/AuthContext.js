@@ -2,21 +2,22 @@ import { createContext, useState, useEffect } from 'react'
 import jwt_decode from "jwt-decode";
 import { useNavigate } from 'react-router-dom'
 import authentication_api_url from './authentication_api_url';
+import backend_api_url from '../Utils/backend_api_url'
 
 const AuthContext = createContext()
 
 export default AuthContext;
 
 export const AuthProvider = ({children}) => {
-    const [authTokens, setAuthTokens] = useState(()=> localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
-    const [user, setUser] = useState(()=> localStorage.getItem('authTokens') ? jwt_decode(localStorage.getItem('authTokens')) : null)
+    const [authTokens, setAuthTokens] = useState(() => localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
+    const [user, setUser] = useState(() => localStorage.getItem('authTokens') ? jwt_decode(localStorage.getItem('authTokens')) : null)
     const [loading, setLoading] = useState(true)
 
     const navigateTo = useNavigate()
     
     const registerUser = async (e) => {
         e.preventDefault()
-        const response = await fetch(authentication_api_url + 'user/', {
+        const response = await fetch(backend_api_url + 'user/', {
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
