@@ -1,0 +1,6 @@
+-create venv with python3.10.2
+-activate venv
+-pip install -r requirements.txt
+-python manage.py makemigrations
+-python manage.py migrate
+-python manage.py runserver
