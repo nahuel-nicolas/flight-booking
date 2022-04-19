@@ -3,4 +3,4 @@
 -pip install -r requirements.txt <br />
 -python manage.py makemigrations <br />
 -python manage.py migrate <br />
--python manage.py runserver <br />
+-python manage.py runserver 127.0.0.1:8000<br />
