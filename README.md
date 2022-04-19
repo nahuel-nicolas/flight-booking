@@ -1,4 +1,4 @@
--create venv with python3.10.2 /n
+-create venv with python3.10.2__
 -activate venv
 -pip install -r requirements.txt
 -python manage.py makemigrations
