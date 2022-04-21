@@ -1,6 +1,5 @@
--create venv with python3.10.2 <br />
+-create venv with python version compatible with Django4.0. Python version must be >= 3.8. (Caveat: This project was built with python3.10.2) <br />
 -activate venv <br />
 -pip install -r requirements.txt <br />
--python manage.py makemigrations <br />
 -python manage.py migrate <br />
 -python manage.py runserver 127.0.0.1:8000<br />
