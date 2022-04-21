@@ -1,8 +1,7 @@
 from rest_framework import viewsets, permissions, mixins
 from rest_framework.response import Response
 from .models import City, Flight, FlightBooking, Customer
-from django.contrib.auth.models import User
-from .serializers import CitySerializer, FlightSerializer, FlightBookingSerializer, CustomerSerializer, UserSerializer
+from .serializers import CitySerializer, FlightSerializer, FlightBookingSerializer, CustomerSerializer
 
 class FastSearchModelViewSet(viewsets.ModelViewSet):
     custom_search_key = "id"
@@ -44,8 +43,3 @@ class CustomerViewSet(FastSearchModelViewSet):
     serializer_class = CustomerSerializer
     permission_classes = [permissions.IsAuthenticated]
     custom_search_key = "user"
-
-class UserViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-    permission_classes = []

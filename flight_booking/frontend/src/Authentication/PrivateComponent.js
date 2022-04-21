@@ -5,6 +5,7 @@ import AuthContext from './AuthContext'
 const PrivateComponent = ({ children }) => {
     const navigateTo = useNavigate()
     const { user } = useContext(AuthContext)
+
     if (user) {
         return <>{children}</>
     } else {

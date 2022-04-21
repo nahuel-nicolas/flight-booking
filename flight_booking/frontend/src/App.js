@@ -15,17 +15,16 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-        <Header />
         <Routes>
           <Route path="register" element={<RegisterPage />} />
           <Route path="login" element={<LoginPage />} />
           <Route 
             path="/" 
-            element={<PrivateComponent><BookingsTable /></PrivateComponent>} 
+            element={<PrivateComponent><Header /><BookingsTable /></PrivateComponent>} 
           />
           <Route 
             path="form" 
-            element={<PrivateComponent><BookingForm /></PrivateComponent>} 
+            element={<PrivateComponent><Header /><BookingForm /></PrivateComponent>} 
           />
           <Route path="*" element={<h2>Error 404</h2>} />
         </Routes>

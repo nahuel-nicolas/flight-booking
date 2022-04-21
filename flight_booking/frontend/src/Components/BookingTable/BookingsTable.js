@@ -66,36 +66,38 @@ const BookingsTable = () => {
         )
     }
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Departure City</th>
-                    <th>Arriving City</th>
-                    {["Go Flight", "Round Flight"].map((flightType, i) => (
-                        <Fragment key={i}>
-                            <th>{flightType}<br />Departure Date</th>
-                            <th>{flightType}<br />Arriving Date</th>
-                        </Fragment>
-                    ))}
-                    <th>Passengers Count</th>
-                    <th>Flight Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    api_data.currentUserBookings.map((booking_id, index) => (
-                            <BookingRow 
-                                api_data={api_data}
-                                key={booking_id}
-                                booking_id={booking_id}
-                                index={index}
-                            />
+        <>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Departure City</th>
+                        <th>Arriving City</th>
+                        {["Go Flight", "Round Flight"].map((flightType, i) => (
+                            <Fragment key={i}>
+                                <th>{flightType}<br />Departure Date</th>
+                                <th>{flightType}<br />Arriving Date</th>
+                            </Fragment>
+                        ))}
+                        <th>Passengers Count</th>
+                        <th>Flight Class</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        api_data.currentUserBookings.map((booking_id, index) => (
+                                <BookingRow 
+                                    api_data={api_data}
+                                    key={booking_id}
+                                    booking_id={booking_id}
+                                    index={index}
+                                />
+                            )
                         )
-                    )
-                }
-            </tbody>
-        </table>  
+                    }
+                </tbody>
+            </table> 
+        </>
     )
 }
 
