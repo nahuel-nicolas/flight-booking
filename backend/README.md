@@ -3,4 +3,4 @@
 -pip install -r requirements.txt <br />
 -python manage.py migrate <br />
 -python manage.py runserver 127.0.0.1:8000 <br />
--I recommend running backend with 127.0.0.1:8000, but if you run the server with another url rather than 127.0.0.1:8000 you will have to update the /frontend/src/backend_url.js file, install frontend dependencies and appy changes running dev server/running a new build. <br />
+-I recommend running backend with 127.0.0.1:8000, but if you run the server with another url rather than 127.0.0.1:8000 you will have to update the /frontend/src/backend_url.js file, install frontend dependencies and apply changes running dev server or running a new build. <br />
