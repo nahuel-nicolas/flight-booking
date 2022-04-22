@@ -1,3 +1,7 @@
--Once backend server is running you can click in ./build/index.html and play with the app.
--If you want to run development server then install node version >=16.8 (Node version used for this project was 17.7.2), activate node and "npm install". Then "npm start" to run dev server or "npm run build" to make a new build.
--Backend url is set to be 127.0.0.1:8000 if you have setted up another ip for the backend it won't work unless you change the ./src/backend_url.js default export. After update run "npm start" or "npm run build" to apply changes.
+-Once backend server is running you can click in ./build/index.html and play with the app. </ br>
+
+-If you want to run development server then install node version >=16.8 
+(Node version used for this project was 17.7.2), activate node and "npm install". Then "npm start" to run dev server or "npm run build" to make a new build. </ br>
+
+-Backend url is set to be 127.0.0.1:8000 if you have setted up another ip for the backend it won't work unless you change the 
+./src/backend_url.js default export. After update run "npm start" or "npm run build" to apply changes. </ br>
