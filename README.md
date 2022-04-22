@@ -1,3 +1,3 @@
--Both backend and frontend have their own README.md files. </ br>
--First run backend server and then frontend. </ br>
--requeriments.txt is located in backend folder. </ br>
+-Both backend and frontend have their own README.md files. <br />
+-First run backend server and then frontend. <br />
+-requeriments.txt is located in backend folder. <br />
