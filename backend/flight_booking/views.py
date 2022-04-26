@@ -23,23 +23,23 @@ class CityViewSet(FastSearchModelViewSet):
     model = City
     queryset = City.objects.all()
     serializer_class = CitySerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 class FlightViewSet(FastSearchModelViewSet):
     model = Flight
     queryset = Flight.objects.all()
     serializer_class = FlightSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 class FlightBookingViewSet(FastSearchModelViewSet):
     model = FlightBooking
     queryset = FlightBooking.objects.all()
     serializer_class = FlightBookingSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 class CustomerViewSet(FastSearchModelViewSet):
     model = Customer
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
     permission_classes = [permissions.IsAuthenticated]
-    custom_search_key = "user"
+    # custom_search_key = "user"
