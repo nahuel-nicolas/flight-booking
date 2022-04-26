@@ -1,3 +1,3 @@
--Both backend and frontend have their own README.md files. <br />
--First run backend server and then frontend. <br />
--requeriments.txt is located in backend folder. <br />
+-Open terminal <br />
+-Type: "docker-compose up" <br />
+-This will create docker images (backend and frontend) and will run them automatically. Backend will listen at 0.0.0.0:8000 and frontend at localhost:3000<br />
