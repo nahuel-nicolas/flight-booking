@@ -9,8 +9,9 @@ from rest_framework import routers
 router = routers.DefaultRouter()
 router.register('user', UserViewSet)
 
+app_name = 'authentication'
 urlpatterns = [
-    path('', views.getRoutes),
+    path('', views.getRoutes, name='authentication_home'),
     path('token/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
